@@ -23,6 +23,7 @@ export const HTTP = {
 
   async get(endpoint) {
     const response = await fetch(this.getUrl(endpoint), {
+      mode: 'no-cors',
       method: 'GET',
       headers: {
         ...this.authHeader()
@@ -33,6 +34,7 @@ export const HTTP = {
 
   async post(endpoint, data = {}) {
     const response = await fetch(this.getUrl(endpoint), {
+      mode: 'no-cors',
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -45,6 +47,7 @@ export const HTTP = {
 
   async delete(endpoint, data) {
     const response = await fetch(this.getUrl(endpoint), {
+      mode: 'no-cors',
       method: 'DELETE',
       headers: {
         ...this.authHeader()
@@ -55,6 +58,7 @@ export const HTTP = {
 
   async put(endpoint, data = {}) {
     const response = await fetch(this.getUrl(endpoint), {
+      mode: 'no-cors',      
       method: 'PUT',
       body: JSON.stringify(data),
       headers: {
