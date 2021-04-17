@@ -11,7 +11,7 @@ const Home = () => {
 
   useEffect(() => {
     MentorService.list().then(({ data }) => {
-      setMentors(data.mentors)
+      setMentors(data.data.mentors)
     })
   }, [])
 

@@ -7,7 +7,7 @@ const login = (email, password) => {
   return HTTP.post('/auth/login', {
     email, password
   }).then(response => {
-    Storage.setJSON(userKeyPrefix, response.data)
+    Storage.setJSON(userKeyPrefix, response.data.data)
     return response
   })
 }

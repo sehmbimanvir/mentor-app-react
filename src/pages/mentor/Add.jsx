@@ -20,7 +20,7 @@ const AddMentor = () => {
   useEffect(() => {
     if (mentorId) {
       MentorService.show(mentorId).then(({ data }) => {
-        let { name, email, tasks } = data.mentor
+        let { name, email, tasks } = data.data.mentor
         setMentorDetails({
           name, email, tasks
         })
@@ -58,7 +58,7 @@ const AddMentor = () => {
     e.preventDefault()
     const Action = mentorId ? MentorService.update(mentorId, mentorDetails) : MentorService.store(mentorDetails)
     Action.then(response => {
-      alert(response.message)
+      alert(response.data.message)
       history.push('/')
     })
   }

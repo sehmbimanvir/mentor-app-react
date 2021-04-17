@@ -9,13 +9,11 @@ import { history } from './helpers/history'
 import './index.css'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <Router history={history}>
-        <App />
-      </Router>
-    </Provider>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <Router history={history}>
+      <App />
+    </Router>
+  </Provider>,
   document.getElementById('root')
 );
 
