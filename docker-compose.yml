@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  mentor-app-react:
+    container_name: mentor-app-fe-server
+    build:
+      context: .
+    ports:
+      - '80:80'
